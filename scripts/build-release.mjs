@@ -16,8 +16,8 @@ await walk(web);assets.push('./');const worker=(await readFile(join(root,'script
 console.log('Built dist/web');
 if(process.argv.includes('--extension')){
  const ext=resolve(root,'dist/extension');await rm(ext,{recursive:true,force:true});await cp(web,ext,{recursive:true});
- await cp(join(root,'apps/extension'),join(ext,'apps/extension'),{recursive:true,filter:p=>filter(p)&&!/(build\.mjs|ui\.js|coordinator\.js|storage\.js|journal\.html|popup\.html|worker\.js|manifest\.json)$/.test(p)});
- await cp(join(root,'apps/extension/popup.html'),join(ext,'popup.html'));await cp(join(root,'apps/extension/manifest.json'),join(ext,'manifest.json'));
+ await cp(join(root,'apps/extension'),join(ext,'apps/extension'),{recursive:true,filter:p=>filter(p)&&!p.split('/').includes('_locales')&&!/(build\.mjs|ui\.js|coordinator\.js|storage\.js|journal\.html|popup\.html|worker\.js|manifest\.json)$/.test(p)});
+ await cp(join(root,'apps/extension/popup.html'),join(ext,'popup.html'));await cp(join(root,'apps/extension/manifest.json'),join(ext,'manifest.json'));await cp(join(root,'apps/extension/_locales'),join(ext,'_locales'),{recursive:true});
  html=(await readFile(join(ext,'index.html'),'utf8')).replace('<meta name="liubai-offline" content="enabled">','').replace('</head>','<meta name="liubai-platform" content="extension">\n</head>');await writeFile(join(ext,'index.html'),html);await rm(join(ext,'offline-worker.js'),{force:true});
  console.log('Built dist/extension');
 }

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "留白 · A Little Pause",
-  "version": "1.0.1",
+  "name": "__MSG_appName__",
+  "version": "1.0.2",
   "description": "写几句日记，做一页手帐。记录留在本机，想回看时再打开。Local mood journal, scrapbook and self-care.",
   "minimum_chrome_version": "116",
   "permissions": [
@@ -13,7 +13,7 @@
     "http://127.0.0.1/*"
   ],
   "action": {
-    "default_title": "留白 · 记下此刻",
+    "default_title": "__MSG_appName__",
     "default_popup": "popup.html",
     "default_icon": "apps/extension/icon.png"
   },
@@ -26,5 +26,6 @@
   "background": {
     "service_worker": "apps/extension/worker-local.js",
     "type": "module"
-  }
+  },
+  "default_locale": "zh_CN"
 }

@@ -2,7 +2,7 @@ export const messages = {
   zh: {
     journalSearch: '搜索日记', journalSearchPlaceholder: '搜索文字或标签', clearSearch: '清除搜索', searchCount: '找到 {n} 条记录', searchEmpty: '没有找到匹配的记录。', searchEmptyHelp: '试试其他关键词，或清除搜索与情绪筛选。', resetSearch: '显示全部记录',
     webDraftClear: '清除这份草稿', webDraftClearConfirm: '清除当前草稿？未保存的输入会被丢弃，已保存的日记不受影响。', webDraftSaved: '草稿已保存在当前浏览器，关闭后可继续。', webDraftFailed: '草稿未能保存，请保留当前页面，重试或下载当前输入。', webDraftInvalid: '草稿暂时无法读取，原始内容未被覆盖。', webDraftRetry: '重试保存草稿', webDraftDownload: '下载当前输入', webDraftRaw: '下载原始草稿', webDraftReload: '重新读取草稿', webDraftReloadConfirm: '重新读取会替换当前输入。需要保留的话，请先下载。', webDraftDiscard: '清除损坏的草稿', webDraftDiscardConfirm: '确认已下载原始草稿，或接受清除后无法恢复？已保存的日记不受影响。', webDraftRetained: '日记已保存，但草稿未能清除。原样重试不会重复新增。', webDraftLeave: '这次输入还没有保存为草稿。确定离开并丢弃当前输入吗？',
-    brand: '留白', tagline: '给自己一点空间', language: '界面语言', skip: '跳到主要内容',
+    brand: '留白-情绪日记', tagline: '给自己一点空间', language: '界面语言', skip: '跳到主要内容',
     today: '此刻', journal: '情绪日记', insights: '情绪线索', care: '关怀空间',
     mood0: '低落', mood1: '有点累', mood2: '还不错', mood3: '很平静', mood4: '很开心',
     work: '工作 / 学业', relationships: '人际关系', partner: '亲密关系', sleep: '睡眠', body: '身体状态', daily: '生活琐事', alone: '独处时光', achievement: '小小成就',
@@ -41,7 +41,7 @@ export const messages = {
   en: {
     journalSearch: 'Search journal', journalSearchPlaceholder: 'Search words or tags', clearSearch: 'Clear search', searchCount: '{n} matching records', searchEmpty: 'No matching records.', searchEmptyHelp: 'Try other words, or clear the search and mood filter.', resetSearch: 'Show all records',
     webDraftClear: 'Clear this draft', webDraftClearConfirm: 'Clear the current draft and discard its input? Saved journal entries are unaffected.', webDraftSaved: 'Draft saved in this browser. Continue after reopening.', webDraftFailed: 'Draft could not be saved. Keep this page open, retry or download your input.', webDraftInvalid: 'Draft could not be read. The original was preserved.', webDraftRetry: 'Retry saving draft', webDraftDownload: 'Download current input', webDraftRaw: 'Download original draft', webDraftReload: 'Reload draft', webDraftReloadConfirm: 'Reloading replaces your current input. Download it first if you want to keep it.', webDraftDiscard: 'Clear damaged draft', webDraftDiscardConfirm: 'Have you downloaded the original draft, or accepted that clearing it cannot be undone? Saved journal entries are unaffected.', webDraftRetained: 'Record saved, but the draft could not be cleared. An unchanged retry will not add a duplicate.', webDraftLeave: 'Your current input has not been saved as a draft. Leave and discard it?',
-    brand: 'A Little Pause', tagline: 'A moment for yourself', language: 'Interface language', skip: 'Skip to main content',
+    brand: 'liubai-alittlepause', tagline: 'A moment for yourself', language: 'Interface language', skip: 'Skip to main content',
     today: 'Today', journal: 'Journal', insights: 'Insights', care: 'Self-care',
     mood0: 'Low', mood1: 'Tired', mood2: 'Okay', mood3: 'Calm', mood4: 'Happy',
     work: 'Work / study', relationships: 'Relationships', partner: 'Partner', sleep: 'Sleep', body: 'Body', daily: 'Daily life', alone: 'Time alone', achievement: 'Small wins',

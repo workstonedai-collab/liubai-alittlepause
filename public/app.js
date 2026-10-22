@@ -162,9 +162,9 @@ function render() {
   pageCleanup?.(); pageCleanup = null; mediaUI?.clearCards();
   document.documentElement.dataset.experience=experience;
   document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-  document.title = CONFIG.name;
+  document.title = t('brand');
   $('#brand').textContent = t('brand'); $('#tagline').textContent = t('tagline'); $('#skip').textContent = t('skip');
-  $('#copyright-copy').textContent=`© ${new Date().getFullYear()} ${language==='zh'?'留白 · Liubai':'Liubai'}`;
+  $('#copyright-copy').textContent=`© ${new Date().getFullYear()} ${language==='zh'?'留白-情绪日记':'liubai-alittlepause'}`;
   $('#feedback-open').textContent=language==='zh'?'意见与反馈':'Feedback';$('#feedback-open').onclick=()=>openFeedback({language,esc,openDialog,lifecycle:({guard})=>{allowDialogClose=guard;}});
   $('#sidebar-note').textContent = t('gentleSuggestion'); $('#footer-copy').textContent = t('footer');
   $('#language-label').textContent = t('language'); $('#language').value = language; $('#language').setAttribute('aria-label', t('language'));
