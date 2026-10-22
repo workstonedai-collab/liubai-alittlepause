@@ -2,15 +2,15 @@
 
 ## 网页
 
-直接打开 [GitHub Pages 网页版](https://workstonedai-collab.github.io/liubai/)。先选一个心情，再写下想留下的话。新用户默认使用沉浸；页面上方和“我的”中都能切换模式。
+直接打开 [GitHub Pages 网页版](https://workstonedai-collab.github.io/liubai-alittlepause/)。先选一个心情，再写下想留下的话。新用户默认使用沉浸；页面上方和“我的”中都能切换模式。
 
 网页版和插件版都有四种底色、独立关怀空间、日历、日记、手帐、照片、语音、便签，以及按需打开的回看与关怀工具。功能入口随模式变化，已有内容不会因隐藏入口而删除。
 
 本机运行需要 Node.js 22：
 
 ```bash
-git clone https://github.com/workstonedai-collab/liubai.git
-cd liubai
+git clone https://github.com/workstonedai-collab/liubai-alittlepause.git
+cd liubai-alittlepause
 npm run dev
 ```
 
@@ -18,7 +18,7 @@ npm run dev
 
 ## 浏览器扩展
 
-1. 从 [Release](https://github.com/workstonedai-collab/liubai/releases/latest) 下载 `liubai-extension` 压缩包并解压；或者运行 `npm run build:extension`。
+1. 从 [Release](https://github.com/workstonedai-collab/liubai-alittlepause/releases/latest) 下载 `liubai-alittlepause-extension` 压缩包并解压；或者运行 `npm run build:extension`。
 2. 在 Chrome 地址栏输入 `chrome://extensions`，或在 Edge 输入 `edge://extensions`。
 3. 开启“开发者模式”，点击“加载已解压的扩展程序”。
 4. 选择解压后的目录；自行构建时选择 `dist/extension`。

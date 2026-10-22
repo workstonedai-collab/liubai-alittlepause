@@ -51,6 +51,6 @@ LIUBAI_TEST_URL=http://127.0.0.1:4190 node tests/voice-browser.cjs
 
 ## 发布后的复验
 
-- [GitHub Actions 浏览器验收](https://github.com/workstonedai-collab/liubai/actions/runs/39719518075)已在独立 Linux 环境通过网页、真实加载扩展、服务界面和生成音频的四组脚本。
-- [构建检查](https://github.com/workstonedai-collab/liubai/actions/runs/39719518000)与[Pages 部署](https://github.com/workstonedai-collab/liubai/actions/runs/39719518184)成功。
-- 在公开网址 https://workstonedai-collab.github.io/liubai/ 再次运行全部 16 条网页路径，通过日记与照片手帐保存重开、分享图、备份跨独立浏览器恢复和布局检查。详见[线上结果](validation/pages-results.json)。验证数据为隔离浏览器内的虚构记录，没有上传日记到共享后台。
+- [GitHub Actions 浏览器验收](https://github.com/workstonedai-collab/liubai-alittlepause/actions/runs/39719518075)已在独立 Linux 环境通过网页、真实加载扩展、服务界面和生成音频的四组脚本。
+- [构建检查](https://github.com/workstonedai-collab/liubai-alittlepause/actions/runs/39719518000)与[Pages 部署](https://github.com/workstonedai-collab/liubai-alittlepause/actions/runs/39719518184)成功。
+- 在公开网址 https://workstonedai-collab.github.io/liubai-alittlepause/ 再次运行全部 16 条网页路径，通过日记与照片手帐保存重开、分享图、备份跨独立浏览器恢复和布局检查。详见[线上结果](validation/pages-results.json)。验证数据为隔离浏览器内的虚构记录，没有上传日记到共享后台。

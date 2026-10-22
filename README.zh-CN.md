@@ -6,7 +6,7 @@
 
 你可以在网页里慢慢写，也可以从浏览器扩展的小弹窗记下此刻。首次打开默认使用“沉浸”，手帐、回看和关怀练习都能找到。只想简单记录，可以切到“轻记”，也能逐项自选功能。默认保存在本机，不登录也能用。AI 对话和跨设备同步需要另外连接自己的服务，发送什么、什么时候上传，都由你确认。
 
-**[打开网页版](https://workstonedai-collab.github.io/liubai/) · [下载网页与扩展](https://github.com/workstonedai-collab/liubai/releases/latest) · [中文使用说明](README.zh-CN.md) · [English](README.en.md)**
+**[打开网页版](https://workstonedai-collab.github.io/liubai-alittlepause/) · [下载网页与扩展](https://github.com/workstonedai-collab/liubai-alittlepause/releases/latest) · [中文使用说明](README.zh-CN.md) · [English](README.en.md)**
 
 <p><img src="docs/assets/home-mobile.png" width="280" alt="留白首页，虚构示例" /> <img src="docs/assets/scrapbook-mobile.png" width="280" alt="手帐照片与插画，虚构示例" /></p>
 
@@ -29,8 +29,8 @@
 需要 Node.js 22 或更高版本。应用和服务不依赖第三方运行时包，下面几步即可打开：
 
 ```bash
-git clone https://github.com/workstonedai-collab/liubai.git
-cd liubai
+git clone https://github.com/workstonedai-collab/liubai-alittlepause.git
+cd liubai-alittlepause
 npm run dev
 ```
 
@@ -44,7 +44,7 @@ npm run dev
 npm run build:extension
 ```
 
-在 Chrome 或 Edge 的扩展管理页开启“开发者模式”，选择“加载已解压的扩展程序”，打开 **dist/extension**。也可以从 [Release](https://github.com/workstonedai-collab/liubai/releases/latest) 下载打好的扩展包，解压后加载。
+在 Chrome 或 Edge 的扩展管理页开启“开发者模式”，选择“加载已解压的扩展程序”，打开 **dist/extension**。也可以从 [Release](https://github.com/workstonedai-collab/liubai-alittlepause/releases/latest) 下载打好的扩展包，解压后加载。
 
 小弹窗用于快速记下心情与文字；“打开完整日记”提供与网页相同的手帐、语音、图库、情绪回看和设置。两者共用此扩展的本机数据。扩展不会读取正在浏览的其他网页，也没有内容脚本；只有你配置自托管服务时，才会请求连接该服务的可选网站权限。
 
@@ -80,6 +80,6 @@ npm run build:all     # dist/web 与 dist/extension
 
 网页版与插件共用界面、数据模型和主要功能，避免两端越用越不一样。可选浏览器验收脚本为 `tests/browser.cjs`，需要另行安装 Playwright 与 Chromium，使用说明见[验证记录](docs/validation.md)。
 
-欢迎在 [Issues](https://github.com/workstonedai-collab/liubai/issues) 写下使用中的问题。请描述版本、浏览器、操作步骤和预期结果，不要附上真实日记、私密照片、账号口令或完整备份。
+欢迎在 [Issues](https://github.com/workstonedai-collab/liubai-alittlepause/issues) 写下使用中的问题。请描述版本、浏览器、操作步骤和预期结果，不要附上真实日记、私密照片、账号口令或完整备份。
 
 代码按 [MIT](LICENSE) 开放。插画、字体与引文的来源和适用条件见 [ASSETS.md](ASSETS.md)。微信小程序仍在审核中；这个仓库交付网页和浏览器扩展，不代表小程序已经发布。情绪记录与关怀工具用于自我梳理，不能替代专业诊疗。

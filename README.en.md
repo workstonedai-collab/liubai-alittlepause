@@ -6,7 +6,7 @@ liubai-alittlepause gives those moments a place. Pick a mood and write a few wor
 
 Use the web app when you have time to write, or the browser extension’s popup for a quick check-in. Start in immersive mode with the full set of tools, switch to a simple mode, or pick features individually. Local recording needs no account. AI conversations and cross-device backup sync are separate, optional connections to a service you host or trust.
 
-**[Try the web app](https://workstonedai-collab.github.io/liubai/) · [Download web and extension packages](https://github.com/workstonedai-collab/liubai/releases/latest) · [中文](README.md)**
+**[Try the web app](https://workstonedai-collab.github.io/liubai-alittlepause/) · [Download web and extension packages](https://github.com/workstonedai-collab/liubai-alittlepause/releases/latest) · [中文](README.md)**
 
 ![Actual Liubai interface with fictional content](docs/assets/home-mobile.png)
 
@@ -25,8 +25,8 @@ Use the web app when you have time to write, or the browser extension’s popup 
 Node.js 22 or later is required. No third-party runtime packages or model keys are needed for local recording.
 
 ```bash
-git clone https://github.com/workstonedai-collab/liubai.git
-cd liubai
+git clone https://github.com/workstonedai-collab/liubai-alittlepause.git
+cd liubai-alittlepause
 npm run dev
 ```
 
@@ -40,7 +40,7 @@ If you prefer working with an agent, give it this repository and ask it to follo
 npm run build:extension
 ```
 
-In Chrome or Edge, open the extension manager, enable Developer mode, choose **Load unpacked**, and select **dist/extension**. Prebuilt packages are also available in [Releases](https://github.com/workstonedai-collab/liubai/releases/latest).
+In Chrome or Edge, open the extension manager, enable Developer mode, choose **Load unpacked**, and select **dist/extension**. Prebuilt packages are also available in [Releases](https://github.com/workstonedai-collab/liubai-alittlepause/releases/latest).
 
 The popup and full extension page share the extension’s local records. The full page uses the same application as the web edition. No content script reads other websites. Optional host access is requested only when you explicitly configure a self-hosted service.
 
