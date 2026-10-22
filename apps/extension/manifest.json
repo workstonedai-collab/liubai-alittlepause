@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "留白 · A Little Pause",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "写几句日记，做一页手帐。记录留在本机，想回看时再打开。Local mood journal, scrapbook and self-care.",
   "minimum_chrome_version": "116",
   "permissions": [

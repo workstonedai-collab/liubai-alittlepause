@@ -4,7 +4,7 @@ Some thoughts do not belong on a public feed. You finish a long day knowing you 
 
 Liubai gives those moments a place. Pick a mood and write a few words. Add a photo, record your voice, or put them together on a scrapbook page. Come back later through the calendar, follow an ongoing story across dates, or gather a week into a printable booklet. There is no streak to protect, and an unrecorded day is never treated as a calm day.
 
-Use the web app when you have time to write, or the browser extension’s popup for a quick check-in. Choose a simple mode, open the richer tools, or pick features individually. Local recording needs no account. AI conversations and cross-device backup sync are separate, optional connections to a service you host or trust.
+Use the web app when you have time to write, or the browser extension’s popup for a quick check-in. Start in immersive mode with the full set of tools, switch to a simple mode, or pick features individually. Local recording needs no account. AI conversations and cross-device backup sync are separate, optional connections to a service you host or trust.
 
 **[Try the web app](https://workstonedai-collab.github.io/liubai/) · [Download web and extension packages](https://github.com/workstonedai-collab/liubai/releases/latest) · [中文](README.md)**
 

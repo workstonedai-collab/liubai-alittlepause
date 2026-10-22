@@ -5,7 +5,7 @@ export function readMode(storage) {
   catch { return 'care'; }
 }
 export function initialExperience(storage){
-  try{storage??=globalThis.localStorage;if(storage.getItem(EXPERIENCE_KEY)===null){const mode=storage.length>0?'immersive':'simple';storage.setItem(EXPERIENCE_KEY,mode);return mode;}return readMode(storage);}catch{return 'care';}
+  try{storage??=globalThis.localStorage;if(storage.getItem(EXPERIENCE_KEY)===null){const mode='immersive';storage.setItem(EXPERIENCE_KEY,mode);return mode;}return readMode(storage);}catch{return 'care';}
 }
 export function writeMode(mode, storage = globalThis.localStorage) {
   if (!MODES.includes(mode)) throw Error('experienceInvalid');

@@ -1,10 +1,12 @@
 {
   "name": "liubai",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "description": "A local-first mood journal, scrapbook and space for self-care.",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "node scripts/build-release.mjs && node services/server.mjs",
     "start": "node services/server.mjs",
