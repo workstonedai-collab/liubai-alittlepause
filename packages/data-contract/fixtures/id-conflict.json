@@ -1,0 +1,20 @@
+{
+  "schema": "local-mood-journal",
+  "version": 1,
+  "exportedAt": "2026-10-06T00:00:00.000Z",
+  "data": {
+    "version": 1,
+    "entries": [
+      {
+        "id": "fictional-0",
+        "mood": 0,
+        "tags": [
+          "work"
+        ],
+        "text": "Fictional conflicting fixture",
+        "date": "2026-10-05T12:00:00.000Z"
+      }
+    ],
+    "careCount": 0
+  }
+}

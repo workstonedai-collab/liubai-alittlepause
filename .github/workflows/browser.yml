@@ -1,0 +1,36 @@
+name: Browser acceptance
+on:
+  push:
+    branches: [main]
+    paths: ['public/**', 'apps/**', 'packages/**', 'services/**', 'scripts/**', 'tests/**', '.github/workflows/browser.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false playwright@1.62.1
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build:all
+      - name: Start local preview
+        run: |
+          PORT=4190 node services/server.mjs > /tmp/liubai-preview.log 2>&1 &
+          for attempt in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:4190/ > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - run: node tests/browser.cjs
+        env:
+          LIUBAI_TEST_URL: http://127.0.0.1:4190
+      - run: node tests/extension-browser.cjs
+      - run: node tests/service-browser.cjs
+      - run: node tests/voice-browser.cjs
+        env:
+          LIUBAI_TEST_URL: http://127.0.0.1:4190

@@ -1,0 +1,56 @@
+{
+  "schema": "local-mood-journal",
+  "version": 2,
+  "exportedAt": "2026-10-06T00:00:00.000Z",
+  "data": {
+    "version": 1,
+    "entries": [
+      {
+        "id": "fictional-0",
+        "mood": 0,
+        "tags": [
+          "work"
+        ],
+        "text": "虚构互通样本 0 / Fictional interoperability fixture 🌿",
+        "date": "2026-10-05T12:00:00.000Z"
+      },
+      {
+        "id": "fictional-1",
+        "mood": 1,
+        "tags": [
+          "sleep"
+        ],
+        "text": "虚构互通样本 1 / Fictional interoperability fixture 🌿",
+        "date": "2026-10-05T12:00:01.000Z"
+      },
+      {
+        "id": "fictional-2",
+        "mood": 2,
+        "tags": [
+          "daily"
+        ],
+        "text": "虚构互通样本 2 / Fictional interoperability fixture 🌿",
+        "date": "2026-10-05T12:00:02.000Z"
+      },
+      {
+        "id": "fictional-3",
+        "mood": 3,
+        "tags": [
+          "alone"
+        ],
+        "text": "虚构互通样本 3 / Fictional interoperability fixture 🌿",
+        "date": "2026-10-05T12:00:03.000Z"
+      },
+      {
+        "id": "fictional-4",
+        "mood": 4,
+        "tags": [
+          "achievement"
+        ],
+        "text": "虚构互通样本 4 / Fictional interoperability fixture 🌿",
+        "date": "2026-10-05T12:00:04.000Z"
+      }
+    ],
+    "careCount": 2
+  }
+}

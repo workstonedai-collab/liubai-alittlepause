@@ -1,0 +1,21 @@
+{
+  "checks": [
+    "new user guide",
+    "mode change and rich home",
+    "journal save and reopen",
+    "feeling, energy and needs sidecar",
+    "journal share image download",
+    "scrapbook photo selection, backdrop and save",
+    "scrapbook image persists after reopen",
+    "resume or new draft choice",
+    "topics, weekly page and printable booklet",
+    "AI overview explicit text preview",
+    "chat typing and confirmed preferences",
+    "profile save and reopen",
+    "portable backup with media, excluding AI preferences",
+    "complete backup restored in a second isolated browser",
+    "private care is separate and AI is unavailable",
+    "320/390/768/1280 responsive widths"
+  ],
+  "errors": []
+}

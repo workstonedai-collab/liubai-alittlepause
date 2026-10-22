@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "extension loads with its CSP",
+    "popup saves a local entry",
+    "full page reads popup data",
+    "reopen retains records",
+    "scrapbook backdrop and sticker save",
+    "scrapbook PNG download"
+  ],
+  "errors": []
+}

@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "account login from the UI",
+    "explicit snapshot upload",
+    "chat UI -> authenticated service -> fictional transport -> displayed reply",
+    "overview selection, consent and reply display",
+    "letter send, server persistence and maintainer reply reopened",
+    "second isolated browser downloads and merges the account snapshot",
+    "AI conversation excluded from synchronization"
+  ],
+  "errors": [],
+  "provider": "fictional injected transport; no paid request"
+}

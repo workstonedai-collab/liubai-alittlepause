@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "explicit recording start",
+    "generated microphone chunks saved",
+    "recording stopped and saved",
+    "saved recording reopened after reload"
+  ],
+  "errors": [],
+  "device": "Chromium fake microphone; no physical microphone"
+}

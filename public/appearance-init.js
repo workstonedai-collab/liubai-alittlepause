@@ -1,0 +1,2 @@
+// Apply a saved, allowlisted appearance before styles paint. Never reads journal data.
+(()=>{try{const values=['meadow','night','mist','paper'],value=localStorage.getItem('liubai.appearance.v1'),theme=value==='auto'?(matchMedia('(prefers-color-scheme: dark)').matches?'night':'meadow'):values.includes(value)?value:'meadow';document.documentElement.dataset.appearance=theme;document.documentElement.style.colorScheme=theme==='night'?'dark':'light';}catch{document.documentElement.dataset.appearance='meadow';}})();

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "留白 · A Little Pause",
+  "version": "1.0.0",
+  "description": "写几句日记，做一页手帐。记录留在本机，想回看时再打开。Local mood journal, scrapbook and self-care.",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "storage"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "action": {
+    "default_title": "留白 · 记下此刻",
+    "default_popup": "popup.html",
+    "default_icon": "apps/extension/icon.png"
+  },
+  "icons": {
+    "128": "apps/extension/icon.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self' blob: data:; connect-src https: http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"
+  },
+  "background": {
+    "service_worker": "apps/extension/worker-local.js",
+    "type": "module"
+  }
+}

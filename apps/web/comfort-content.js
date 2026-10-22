@@ -1,0 +1,32 @@
+export const comfortContent = {
+  zh: {
+    gallery: '相册', galleryTitle: '留住一些小片刻', gallerySub: '只在这个浏览器里，慢慢看。',
+    quoteTitle: '日常一笺', quoteOriginal: '留白 · 原创', quoteNext: '下一句', quoteSave: '收藏', quoteSaved: '已收藏', quoteHide: '收起这一笺', quoteShow: '展开日常一笺', quoteFavorites: '收藏夹', quoteEmpty: '还没有收藏。读到喜欢的句子，可以留在这里。', quoteActions: '句子操作', quoteStorageFailed: '未能保存这次选择，原来的收藏还在。请检查浏览器存储后重试。',
+    galleryInvite: '留一张让你想停一会儿的照片。', galleryOpen: '打开私人相册', galleryPrivacy: '私人相册 · 当前浏览器保存，不上传。共享与审核尚未开放。',
+    galleryLimits: '静态 JPG、PNG、WebP；一次最多10张，每张原图≤5 MiB，最长边≤10,000像素且总像素≤2,400万。本地生成最长边1,600像素、每张≤2 MiB的副本；最多40张、共25 MiB（含可恢复区）。',
+    galleryBackupNote: '日记 JSON 不含图片或短句收藏。相册请单独导出；浏览器清理/无痕/空间回收可能丢失图片，同设备其他使用者也可能看到。',
+    gallerySelect: '选择多张图片', galleryPreview: '待保存预览', gallerySave: '保存到本机', galleryDiscard: '放弃本次选择', galleryLoading: '正在读取本机相册…', galleryPreparing: '正在本机准备图片…', gallerySaving: '正在保存…',
+    galleryEmpty: '这里还没有图片。', galleryEmptySub: '选择自己愿意留下的照片，或者先留白。', galleryCount: '{n} 张图片 · {size} MiB 已用', galleryPosition: '第 {n} / {total} 张',
+    galleryPrevious: '上一张', galleryNext: '下一张', galleryPlay: '慢速播放（每10秒）', galleryPause: '暂停播放', galleryReduced: '已尊重系统减少动态偏好，仅支持手动切换。', galleryRemove: '移入可恢复区', galleryConfirmRemove: '确认移入可恢复区', galleryRemoveHelp: '图片会从轮播移出，仍可恢复；不会自动清空。', galleryCancel: '取消',
+    galleryTrash: '可恢复区', galleryRestore: '恢复', galleryPurge: '永久删除', galleryConfirmPurge: '确认永久删除', galleryPurgeHelp: '永久删除后只能从你的独立相册备份找回，请先导出。',
+    galleryExport: '导出相册备份', galleryImport: '选择相册备份', galleryImportConfirm: '确认合并相册', galleryImportHelp: '此备份包含 {n} 张图片（含可恢复区）；合并会跳过已存在图片，不覆盖日记、不自动恢复已删除图片。',
+    galleryDone: '已保存 {n} 张；跳过 {skipped} 张重复图片。', galleryImported: '相册已合并：新增 {n} 张，跳过 {skipped} 张；日记未更改。', galleryExported: '相册备份已生成，请妥善保管下载文件。',
+    galleryUnsupported: '此浏览器暂不支持本机图片处理或相册存储，请使用较新的浏览器。', galleryReadFailed: '相册读取失败，写入已暂停；日记仍可独立使用。', galleryWriteFailed: '相册未能保存，现有图片保持不变，请保留预览后检查空间或权限。',
+    galleryFormat: '只接受静态 JPG、PNG、WebP；图片内容与格式必须匹配。', galleryFileLarge: '原图超过5 MiB、本机副本超过2 MiB，或备份超过36 MiB；本次未写入。', galleryDimensions: '图片尺寸或总像素超过限制，本次未写入。', galleryCapacity: '已达到40张或25 MiB总容量（含可恢复区）；请导出后明确清理。', galleryBatch: '一次请选择1至10张图片。', galleryDecode: '图片无法读取或已损坏，本次未写入。', galleryBackupInvalid: '相册备份损坏、版本不支持或校验不符，本次未写入。', galleryBusy: '请等待当前操作结束。', galleryRetry: '重新读取相册', galleryDownloadImage: '导出当前图片',
+  },
+  en: {
+    gallery: 'Album', galleryTitle: 'Keep a few small moments', gallerySub: 'Take your time, in this browser only.',
+    quoteTitle: 'A daily letter', quoteOriginal: 'Original · A Little Pause', quoteNext: 'Next line', quoteSave: 'Save line', quoteSaved: 'Saved', quoteHide: 'Hide', quoteShow: 'Show today’s line', quoteFavorites: 'Saved lines', quoteEmpty: 'No saved lines yet. Keep one when you wish.', quoteActions: 'Line controls', quoteStorageFailed: 'Line preferences could not be saved. Existing settings were preserved. Check browser storage and retry.',
+    galleryInvite: 'Keep a picture that makes you want to pause.', galleryOpen: 'Open private album', galleryPrivacy: 'Private album · kept in this browser, never uploaded. Sharing and moderation are not available yet.',
+    galleryLimits: 'Static JPG, PNG, WebP; up to 10 at once, original ≤5 MiB, longest edge ≤10,000 pixels and ≤24 million pixels. A local copy is resized to ≤1,600 pixels and ≤2 MiB. Up to 40 images and 25 MiB including recoverable images.',
+    galleryBackupNote: 'Journal JSON excludes pictures and saved lines. Export the album separately. Browser clearing, private browsing or storage eviction may lose pictures. Other users of this device may see them.',
+    gallerySelect: 'Choose pictures', galleryPreview: 'Preview before saving', gallerySave: 'Save in this browser', galleryDiscard: 'Discard selection', galleryLoading: 'Reading local album…', galleryPreparing: 'Preparing pictures locally…', gallerySaving: 'Saving…',
+    galleryEmpty: 'No pictures here yet.', galleryEmptySub: 'Choose pictures you want to keep, or leave this space empty.', galleryCount: '{n} pictures · {size} MiB used', galleryPosition: 'Picture {n} / {total}',
+    galleryPrevious: 'Previous picture', galleryNext: 'Next picture', galleryPlay: 'Slow playback (10 seconds)', galleryPause: 'Pause playback', galleryReduced: 'Reduced motion is on. Pictures change manually only.', galleryRemove: 'Move to recoverable area', galleryConfirmRemove: 'Confirm move', galleryRemoveHelp: 'The picture leaves the carousel and remains recoverable. It is never cleared automatically.', galleryCancel: 'Cancel',
+    galleryTrash: 'Recoverable pictures', galleryRestore: 'Restore', galleryPurge: 'Delete permanently', galleryConfirmPurge: 'Confirm permanent deletion', galleryPurgeHelp: 'Only your separate album backup can recover a permanently deleted picture. Export first.',
+    galleryExport: 'Export album backup', galleryImport: 'Choose album backup', galleryImportConfirm: 'Confirm album merge', galleryImportHelp: 'This backup contains {n} pictures including recoverable items. Merge skips existing images, preserves the journal and never automatically restores deleted pictures.',
+    galleryDone: 'Saved {n}; skipped {skipped} duplicates.', galleryImported: 'Album merged: added {n}, skipped {skipped}. Journal unchanged.', galleryExported: 'Album backup created. Keep the downloaded file private.',
+    galleryUnsupported: 'This browser cannot process or store local pictures. Try a newer browser.', galleryReadFailed: 'Album read failed; writes are paused. The journal remains independent.', galleryWriteFailed: 'Album save failed. Existing pictures are unchanged. Keep the preview and check space or permissions.',
+    galleryFormat: 'Only static JPG, PNG and WebP are accepted; content must match the format.', galleryFileLarge: 'Original exceeds 5 MiB, local copy exceeds 2 MiB or backup exceeds 36 MiB. Nothing was written.', galleryDimensions: 'Picture dimensions or pixel count exceed the limit. Nothing was written.', galleryCapacity: 'Album reached 40 pictures or 25 MiB including recoverable items. Export before explicitly removing items.', galleryBatch: 'Choose 1 to 10 pictures at a time.', galleryDecode: 'Picture unreadable or damaged. Nothing was written.', galleryBackupInvalid: 'Album backup is damaged, unsupported or fails verification. Nothing was written.', galleryBusy: 'Wait for the current operation to finish.', galleryRetry: 'Read album again', galleryDownloadImage: 'Export current picture',
+  }
+};

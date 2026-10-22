@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env*
+!.env.example
+.liubai-data/
+.vercel/
+.DS_Store
+test-results/
+playwright-report/
+*.local.json
+*.backup.json

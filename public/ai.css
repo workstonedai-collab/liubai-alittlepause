@@ -1,0 +1,5 @@
+#ai-panel .ai-copy { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 16rem; overflow: auto; padding: 1rem; border: 1px solid var(--line, #d8dfd6); border-radius: .75rem; }
+#ai-panel .ai-consent { display: flex; align-items: flex-start; gap: .5rem; margin: 1rem 0; }
+#ai-panel [aria-pressed="true"] { outline: 2px solid var(--accent, #57735c); outline-offset: 2px; }
+#ai-panel [hidden] { display: none; }
+#dialog:has(#ai-panel) .dialog-close { position: sticky; float: right; top: -20px; margin: -25px -25px 0 0; background: var(--paper); z-index: 2; }

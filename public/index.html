@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="A local mood journal and a gentle space for daily self-care.">
+  <title>留白 · A Little Pause</title>
+  <link rel="icon" href="./favicon.svg">
+  <script src="./appearance-init.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./ai.css">
+  <link rel="stylesheet" href="./comfort.css">
+  <link rel="stylesheet" href="./care-chat.css">
+  <link rel="stylesheet" href="./experience.css">
+  <link rel="stylesheet" href="./appearance.css">
+  <link rel="stylesheet" href="./mini-experience.css">
+</head>
+<body>
+  <a class="skip" href="#main" id="skip"></a>
+  <aside class="sidebar">
+    <a class="brand" href="#today"><img src="./favicon.svg" alt=""><span id="brand"></span></a>
+    <p id="tagline" class="nav-caption"></p>
+    <nav aria-label="Navigation" id="navigation"></nav>
+    <p class="sidebar-note" id="sidebar-note"></p>
+    <button class="privacy-link" data-privacy></button>
+  </aside>
+  <div class="app">
+    <header><span id="date-label"></span><label class="language"><span id="language-label"></span><select id="language"><option value="zh">中文</option><option value="en">English</option></select></label></header>
+    <div id="storage-banner" class="storage-banner" role="alert" hidden></div>
+    <div id="gentle-reminder" class="gentle-reminder" role="status" hidden></div>
+    <div id="local-save-summary" class="local-save-summary"></div>
+    <main id="main" tabindex="-1"></main>
+    <footer><span id="copyright-copy"></span><span id="footer-copy"></span><button id="quick-notes-open"></button><button id="daily-settings-open"></button><button id="privacy-cover-open"></button><button id="feedback-open"></button><button data-privacy></button><button id="backup-open"></button></footer>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialog-title"><button class="dialog-close" id="dialog-close"></button><div id="dialog-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <button hidden class="care-fab" id="care-launcher" aria-haspopup="dialog" aria-controls="care-dialog" aria-expanded="false"></button>
+  <dialog id="care-dialog" aria-labelledby="care-title"></dialog>
+  <dialog id="privacy-curtain" aria-labelledby="curtain-title"><div><img src="./favicon.svg" alt=""><h2 id="curtain-title"></h2><p id="curtain-note"></p><button class="primary" id="curtain-return"></button></div></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

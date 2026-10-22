@@ -1,0 +1,28 @@
+export const MEDITATIONS = [
+  {id:'arrive',zh:'先安静片刻',en:'Arrive here',steps:[['找一个舒服的位置，可以睁眼，也可以轻轻垂下目光。','Find a comfortable position. Keep your eyes open or lower your gaze.'],['感受脚底或身体与椅子接触的地方。','Notice where your feet or body meet the ground or chair.'],['按舒服的节奏呼吸，不需要把呼吸做得更深。','Breathe at a comfortable pace. There is no need to make it deeper.'],['注意力走远时，轻轻回到此刻的触感。','When attention wanders, gently return to a present sensation.']]},
+  {id:'body',zh:'放松身体',en:'Ease your body',steps:[['调整到不费力的姿势，留意肩膀是否可以放松一点。','Find an easy posture. See whether your shoulders can soften.'],['依次留意额头、下颌、双手，不必强迫它们改变。','Notice your forehead, jaw and hands without forcing change.'],['把注意力放到背部和脚底，感受支撑。','Notice the support under your back and feet.'],['按自己的节奏动动手指，准备好再结束。','Move your fingers at your own pace. Finish when you are ready.']]},
+  {id:'senses',zh:'留意身边',en:'Notice your surroundings',steps:[['找一件看得见的东西，留意颜色、形状或光线。','Notice an object you can see: its color, shape or light.'],['听一听附近的声音，不需要判断它好不好。','Listen to a nearby sound without judging it.'],['感受衣服、桌面或脚下地面的触感。','Feel your clothing, a tabletop or the floor under your feet.'],['允许自己在这里停一会儿。','Let yourself stay here for a moment.']]},
+  {id:'writing',zh:'写作前',en:'Before writing',steps:[['给自己留一小段不必完成什么的时间。','Leave a small stretch of time with nothing to accomplish.'],['想一想，今天有什么画面还在脑海里。','Notice a moment from today that is still with you.'],['不急着解释，只在心里找到一个词。','Without explaining it, find one word for it.'],['准备好以后，从这个词开始写。','When ready, start writing from that word.']]},
+  {id:'evening',zh:'晚间收尾',en:'Close the day',steps:[['暂时放下还没完成的事，找到舒服的位置。','Set unfinished things aside for a moment and get comfortable.'],['想起今天一个普通但值得留下的小片段。','Recall one ordinary moment you might want to keep.'],['如果还有牵挂，可以稍后写下来，不必现在解决。','If something remains on your mind, you can write it down later.'],['留意房间的安静，按自己的节奏结束。','Notice the room around you. End at your own pace.']]},
+  {id:'breath',zh:'跟随呼吸',en:'Follow your breath',steps:[['让呼吸保持自然，不屏息，也不追赶动画。','Keep breathing naturally. No breath holding or need to follow the animation.'],['留意一次吸气开始、结束的感觉。','Notice how one inhalation begins and ends.'],['留意呼气，不需要改变节奏。','Notice an exhalation without changing its pace.'],['如果不舒服，随时停止，回到普通呼吸。','If uncomfortable, stop and return to your usual breathing.']]}
+];
+export function openMeditation({language,esc,openDialog,closeDialog,lifecycle,write,sound}) {
+  const L=(zh,en)=>language()==='zh'?zh:en;
+  let chosen=MEDITATIONS[0],minutes=3,elapsed=0,start=0,running=false,finished=false,disposed=false;
+  const total=()=>minutes*60000,time=()=>Math.min(total(),elapsed+(running?Date.now()-start:0));
+  openDialog(`<h2 id="dialog-title">${L('缓一缓','A quiet moment')}</h2><div id="meditation-root"></div>`);
+  const root=document.querySelector('#meditation-root'),get=id=>root.querySelector('#'+id);
+  function draw(){if(disposed)return;root.innerHTML=`<p class="dialog-sub">${L('原创文字引导，完全在本机运行。保持舒服即可，不需要完成指标；不适时随时停止。','Original local guidance. Stay comfortable, with nothing to achieve. Stop whenever you need.')}</p><div class="meditation-choices">${MEDITATIONS.map(m=>`<button class="secondary" data-meditation="${m.id}" aria-pressed="${chosen.id===m.id}">${L(m.zh,m.en)}</button>`).join('')}</div><label>${L('时长','Duration')}<select id="meditation-minutes" ${running?'disabled':''}>${[1,3,5,10].map(n=>`<option value="${n}" ${minutes===n?'selected':''}>${n} ${L('分钟','min')}</option>`).join('')}</select></label><div class="meditation-orb" aria-hidden="true"></div><p id="meditation-step" class="meditation-step"></p><p id="meditation-time" class="timer" role="timer"></p><div class="dialog-actions"><button class="primary" id="meditation-play">${L(finished?'重新开始':running?'暂停':elapsed?'继续':'开始',finished?'Start again':running?'Pause':elapsed?'Resume':'Start')}</button><button class="secondary" id="meditation-end">${L('结束这次','End session')}</button></div><details><summary>${L('查看全部引导','Read the full guidance')}</summary><ol>${chosen.steps.map(s=>`<li>${esc(L(...s))}</li>`).join('')}</ol></details><div class="dialog-actions"><button class="text-button" id="meditation-write">${L('写下此刻的感受','Write how you feel')}</button><button class="text-button" id="meditation-sound">${L('选择背景声音','Choose sounds')}</button></div>`;
+    root.querySelectorAll('[data-meditation]').forEach(b=>b.onclick=()=>{chosen=MEDITATIONS.find(m=>m.id===b.dataset.meditation);elapsed=0;start=Date.now();finished=false;draw();});
+    get('meditation-minutes').onchange=event=>{minutes=Number(event.target.value);elapsed=0;start=Date.now();finished=false;draw();};
+    get('meditation-play').onclick=()=>{if(running){elapsed=time();running=false;}else{if(finished){elapsed=0;finished=false;}start=Date.now();running=true;}draw();};
+    get('meditation-end').onclick=()=>{elapsed=time();running=false;finished=true;draw();};
+    get('meditation-write').onclick=()=>{if(closeDialog())write();};
+    get('meditation-sound').onclick=()=>{if(closeDialog())sound();};update();
+  }
+  function update(){if(disposed||!get('meditation-time'))return;const current=time(),left=Math.max(0,total()-current);
+    get('meditation-time').textContent=`${String(Math.floor(left/60000)).padStart(2,'0')}:${String(Math.floor(left/1000)%60).padStart(2,'0')}`;
+    get('meditation-step').textContent=finished?L('可以在这里结束，也可以再坐一会儿。','You can finish here, or stay a little longer.'):L(...chosen.steps[Math.min(chosen.steps.length-1,Math.floor(current/total()*chosen.steps.length))]);
+    root.classList.toggle('meditating',running);if(running&&current>=total()){elapsed=total();running=false;finished=true;draw();}}
+  const timer=setInterval(update,250);lifecycle({dispose:()=>{disposed=true;clearInterval(timer);}});draw();
+}
